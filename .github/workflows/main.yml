@@ -24,10 +24,8 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: rjstone/discord-webhook-notify@v1
-
       - name: Test Success
+        uses: rjstone/discord-webhook-notify@v1
         with:
             severity: info
             details: Test Succeeded!
