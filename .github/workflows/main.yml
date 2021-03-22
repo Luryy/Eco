@@ -30,4 +30,4 @@ jobs:
             severity: info
             text: new PR <@360205053031743491>
             webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
-            description: github.repository
+            description: ${{github.repository}}
