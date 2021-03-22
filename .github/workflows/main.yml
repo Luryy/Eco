@@ -30,7 +30,7 @@ jobs:
         uses: rjstone/discord-webhook-notify@v1
         with:
             severity: info
-            text: "New PR assign to ${{ env.REVIEWER_ID }} \n (PR LINK)[https://api.github.com/repos/${{github.repository}}/pulls/${{github.event.pull_request.number}}]"
+            text: "New PR assign to ${{ env.REVIEWER_ID }} \n [PR LINK](${{github.event.pull_request.url}})"
             webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
-            description: " - **Repository** ( ${{github.repository}} )[https://github.com/${{github.repository}}] \n -Author: ${{github.event.pull_request.user.login}}\n [Test](https://github.com/Luryy/Eco/blob/master/.github/workflows/main.yml) \n - **Assing**: ${{github.event.pull_request.requested_reviewers[0].user}}"
+            description: " - **Repository** [${{github.repository}}](https://github.com/${{github.repository}}) \n -Author: ${{github.event.pull_request.user.login}}\n [Test](https://github.com/Luryy/Eco/blob/master/.github/workflows/main.yml) \n - **Assing**: ${{github.event.pull_request.requested_reviewers[0].user}}"
        
