@@ -15,7 +15,7 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 env:
-  reviewer_id: ${{github.actor == 'Luryy' || '<@360205053031743491>' }} 
+  REVIEWER_ID: ${{github.actor == 'Luryy' || '<@360205053031743491>' }} 
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -30,7 +30,7 @@ jobs:
         uses: rjstone/discord-webhook-notify@v1
         with:
             severity: info
-            text: New PR assign to ${{ reviewer_id }}
+            text: New PR assign to ${{ env.REVIEWER_ID }}
             webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
             description: " - **Repository** ${{github.repository}})[https://github.com/${{github.repository}}] \n -Author: ${{github.event.pull_request.user.login}}\n [Test](https://github.com/Luryy/Eco/blob/master/.github/workflows/main.yml) \n - **Assing**: ${{github.event.pull_request.requested_reviewers[0]}}"
        
