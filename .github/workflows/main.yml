@@ -30,4 +30,4 @@ jobs:
             severity: info
             text: new PR <@360205053031743491>
             webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
-            description: " - **Repository** ${{github.repository}}\n -Author: ${{github.event.pull_request.user.login}}\n (Test)[https://github.com/Luryy/Eco/blob/master/.github/workflows/main.yml] "
+            description: " - **Repository** ${{github.repository}}\n -Author: ${{github.event.pull_request.user.login}}\n [Test](https://github.com/Luryy/Eco/blob/master/.github/workflows/main.yml) "
