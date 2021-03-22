@@ -28,6 +28,6 @@ jobs:
         uses: rjstone/discord-webhook-notify@v1
         with:
             severity: info
-            details: Test Lucaas <@360205053031743491>
             text: new PR <@360205053031743491>
             webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
+            description: github.repository
